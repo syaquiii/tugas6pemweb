@@ -1,5 +1,11 @@
+const { initFlowbite } = require("flowbite");
+
 module.exports = {
-  content: ["./*.{html,php,js}"],
+  content: [
+    "./src/**/*.{html,js}",
+    "./node_modules/flowbite/**/*.js", // Include Flowbite components
+  ],
+
   theme: {
     extend: {
       container: {
@@ -8,5 +14,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [Flowbite],
 };
